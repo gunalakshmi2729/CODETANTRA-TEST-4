@@ -1,0 +1,39 @@
+//File Name: q1163/SumOf2DArray.java
+
+package q1163;
+import java.util.Scanner;
+
+public class SumOf2DArray {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the number of rows: ");
+        int numRows = scanner.nextInt();
+        System.out.print("Enter the number of columns: ");
+        int numCols = scanner.nextInt();
+
+        int[][] matrix = new int[numRows][numCols];
+
+        System.out.println("Enter the prices of each medicine:");
+        for (int i = 0; i < numRows; i++) {
+            for (int j = 0; j < numCols; j++) {
+                matrix[i][j] = scanner.nextInt();
+            }
+        }
+        //write your code here
+        int sum = 0;
+        for (int i = 0; i < numRows; i++) {
+        	for (int j = 0; j < numCols; j++) {
+        		sum += matrix[i][j];
+        	}
+        }
+        System.out.println("Total amount: " + sum);
+       
+        
+        
+       
+       
+        
+    }
+}
+
