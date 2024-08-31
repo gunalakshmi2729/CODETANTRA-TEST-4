@@ -1,0 +1,39 @@
+//File Name: q1160/LeadersInArray.java
+
+package q1160;
+import java.util.Scanner;
+
+public class LeadersInArray {
+	public static void findLeaders(int[] arr) {
+	//write your code here	
+		int n=arr.length;
+		int max_right=arr[n-1];
+		System.out.println("Leaders in the array:");
+		System.out.print(max_right + " ");
+		for(int i=n-2;i>=0;i--){
+			if(arr[i]>=max_right){
+				max_right=arr[i];
+				System.out.print(max_right+" ");
+			}
+		}
+		System.out.println();
+		
+		
+	}
+	
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the number of elements in the array: ");
+        int n = scanner.nextInt();
+
+        int[] arr = new int[n];
+
+        System.out.println("Enter the elements of the array:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+        findLeaders(arr);
+    }
+}
+
